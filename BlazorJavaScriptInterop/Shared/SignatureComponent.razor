@@ -1,0 +1,21 @@
+﻿
+@inherits SignatureBase
+<div class="signature-pad--body">
+    <canvas width="500" height="500" style="touch-action: none; border:1px solid #000000;"></canvas>
+</div>
+<div class="signature-pad--footer">
+    <div class="description">Sign above</div>
+
+    <div class="signature-pad--actions">
+        <div>
+            <button type="button" class="button clear" data-action="clear">Clear</button>
+            <button type="button" class="button" data-action="change-color">Change color</button>
+            <button type="button" class="button" data-action="undo">Undo</button>
+            <input id="Save" type="button" value="Save" />
+        </div>
+        <input id="DataArea" type="hidden" @bind-value="@ComponentModel.Data" />
+
+
+    </div>
+</div>
+
