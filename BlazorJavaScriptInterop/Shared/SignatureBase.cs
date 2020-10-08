@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -12,7 +13,9 @@ namespace BlazorJavaScriptInterop.Shared
     {
         public SignatureBase()
         {
+          
             this.ComponentModel = new SignatureModel();
+            //this.ComponentModel.Data = File.ReadAllText("Signature.txt"); 
         }
 
         public SignatureModel ComponentModel { get; set; }

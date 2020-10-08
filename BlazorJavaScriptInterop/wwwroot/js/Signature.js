@@ -10,7 +10,10 @@ function InitSignature(SignatureModel) {
     var canvas = document.querySelector("canvas");
     var DataArea = document.getElementById("DataArea");
     var SaveButton = document.getElementById("Save");
-
+    var ClearButton = document.getElementById("Clear");
+    ClearButton.addEventListener("click", function () {
+        signaturePad.clear();
+    });
     SaveButton.addEventListener("click", function () {
 
         try {
