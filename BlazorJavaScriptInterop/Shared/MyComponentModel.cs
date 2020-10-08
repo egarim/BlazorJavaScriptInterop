@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 
 namespace BlazorJavaScriptInterop.Shared
 {
-    public class ComponentModel : INotifyPropertyChanged, IDisposable
+    public class MyComponentModel : INotifyPropertyChanged, IDisposable
     {
         private string name;
         private string cssClass;
@@ -25,10 +25,10 @@ namespace BlazorJavaScriptInterop.Shared
                 return false;
             }
             propertyValue = newValue;
-            OnPropertyChanged(propertyName);
+            OnPropertyChanged(propertyName, newValue);
             return true;
         }
-        protected void OnPropertyChanged(string propertyName)
+        protected virtual void OnPropertyChanged(string propertyName,object value)
         {
             propertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
@@ -41,7 +41,7 @@ namespace BlazorJavaScriptInterop.Shared
         public void SetAttribute(string name, object value)
         {
             attributes[name] = value;
-            OnPropertyChanged(name);
+            OnPropertyChanged(name, value);
         }
         public bool IsDisposed { get; private set; }
         public void Dispose()
