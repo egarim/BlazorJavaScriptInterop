@@ -16,6 +16,9 @@ function InitSignature(SignatureModel) {
         try {
             //TODO this only save the last changes, lets check the documentation later
             DataArea.value = signaturePad.toDataURL("image/svg+xml");
+
+            console.debug(DataArea.value);
+
             alert("Image Saved");
             //HACK This does not signaturePad.toDataURL().toString();
             //HACK This does not work DataArea.onchange();

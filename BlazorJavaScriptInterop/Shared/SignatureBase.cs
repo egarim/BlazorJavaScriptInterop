@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Components;
+using Microsoft.AspNetCore.Components.Web;
 using Microsoft.JSInterop;
 using System;
 using System.Collections.Generic;
@@ -13,7 +14,24 @@ namespace BlazorJavaScriptInterop.Shared
         {
             this.ComponentModel = new SignatureModel();
         }
+        private async Task Clear(MouseEventArgs e)
+        {
+            //Shipment = this.readUnitOfWork.Query<ShipmentBase>().FirstOrDefault(f => f.Code == this.Code);
+            //if (Shipment != null)
+            //{
+            //    await SetStatus(Shipment.Status);
+            //}
 
+        }
+        private async Task Update(MouseEventArgs e)
+        {
+            //Shipment = this.readUnitOfWork.Query<ShipmentBase>().FirstOrDefault(f => f.Code == this.Code);
+            //if (Shipment != null)
+            //{
+            //    await SetStatus(Shipment.Status);
+            //}
+
+        }
         public SignatureModel ComponentModel { get; set; }
         //[Parameter] public SignatureModel ComponentModel { get; set; }
         [Inject]
