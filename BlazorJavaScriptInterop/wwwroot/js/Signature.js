@@ -3,7 +3,7 @@ function ShowMessage(MessageText) {
 
     alert(MessageText);
 }
-function InitSignature(SignatureModel) {
+function InitSignature(SignatureModel,w,h) {
 
    
   

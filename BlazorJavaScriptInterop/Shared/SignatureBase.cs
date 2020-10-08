@@ -15,7 +15,7 @@ namespace BlazorJavaScriptInterop.Shared
         {
           
             this.ComponentModel = new SignatureModel();
-            //this.ComponentModel.Data = File.ReadAllText("Signature.txt"); 
+            this.ComponentModel.Data = File.ReadAllText("Signature.txt"); 
         }
 
         public SignatureModel ComponentModel { get; set; }
@@ -27,8 +27,6 @@ namespace BlazorJavaScriptInterop.Shared
             if (firstRender)
             {
                 await JSRuntime.InvokeAsync<object>("InitSignature", this.ComponentModel);
-              
-
             }
         }
     }
